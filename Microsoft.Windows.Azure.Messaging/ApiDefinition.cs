@@ -4,7 +4,7 @@ using MonoTouch.ObjCRuntime;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace Microsoft.Windows.Azure.Messaging
+namespace Microsoft.WindowsAzure.Messaging
 {
     /*@interface SBNotificationHub : NSObject
 

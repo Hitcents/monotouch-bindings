@@ -1,6 +1,6 @@
 using System;
 
-namespace Microsoft.Windows.Azure.Messaging
+namespace Microsoft.WindowsAzure.Messaging
 {
 }
 

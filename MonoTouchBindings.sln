@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Windows.Azure.Messaging", "Microsoft.Windows.Azure.Messaging\Microsoft.Windows.Azure.Messaging.csproj", "{46A9E833-C885-4777-8BCD-B6A09369CF58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.WindowsAzure.Messaging", "Microsoft.Windows.Azure.Messaging\Microsoft.WindowsAzure.Messaging.csproj", "{46A9E833-C885-4777-8BCD-B6A09369CF58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBindings", "TestBindings\TestBindings.csproj", "{7933CD04-0D8E-40A2-B412-52955A7441D3}"
 EndProject

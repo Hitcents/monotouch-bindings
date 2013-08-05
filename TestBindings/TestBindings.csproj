@@ -100,9 +100,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.Windows.Azure.Messaging\Microsoft.Windows.Azure.Messaging.csproj">
+    <ProjectReference Include="..\Microsoft.Windows.Azure.Messaging\Microsoft.WindowsAzure.Messaging.csproj">
       <Project>{46A9E833-C885-4777-8BCD-B6A09369CF58}</Project>
-      <Name>Microsoft.Windows.Azure.Messaging</Name>
+      <Name>Microsoft.WindowsAzure.Messaging</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
