@@ -37,7 +37,7 @@ namespace Microsoft.WindowsAzure.Messaging
         void Register(NSData deviceToken, NSSet tags, SBNotificationHubHandler completion);
 
         [Export("unregisterNativeWithCompletion:")]
-        void Unregister(NSData deviceToken, SBNotificationHubHandler completion);
+        void Unregister(SBNotificationHubHandler completion);
     }
 }
 
