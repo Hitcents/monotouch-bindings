@@ -3,14 +3,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{F5B4F3BC-B597-4E2B-B552-EF5D8A32436F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{46A9E833-C885-4777-8BCD-B6A09369CF58}</ProjectGuid>
-    <ProjectTypeGuids>{F5B4F3BC-B597-4E2B-B552-EF5D8A32436F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{E6FE0613-F205-432B-8D44-AF22C115441B}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Microsoft.WindowsAzure.Messaging</RootNamespace>
+    <RootNamespace>TalkingGame</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Microsoft.WindowsAzure.Messaging</AssemblyName>
+    <AssemblyName>TalkingGame</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,16 +47,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
   <ItemGroup>
-    <None Include="SBConnectionString.h" />
-    <None Include="SBNotificationHub.h" />
-    <None Include="WindowsAzureMessaging.h" />
+    <ObjcBindingNativeLibrary Include="libTalkingDataGA.a" />
   </ItemGroup>
   <ItemGroup>
-    <ObjcBindingNativeLibrary Include="WindowsAzureMessaging.a" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="WindowsAzureMessaging.linkwith.cs">
-      <DependentUpon>WindowsAzureMessaging.a</DependentUpon>
+    <Compile Include="libTalkingDataGA.linkwith.cs">
+      <DependentUpon>libTalkingDataGA.a</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

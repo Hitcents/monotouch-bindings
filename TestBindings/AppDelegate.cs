@@ -24,7 +24,8 @@ namespace TestBindings
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Console.WriteLine("Version: " + Microsoft.Windows.Azure.Messaging.SBNotificationHub.Version);
+            //Console.WriteLine("Version: " + Microsoft.Windows.Azure.Messaging.SBNotificationHub.Version);
+            TalkingGame.TalkingDataGA.OnStart("", "");
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 			
