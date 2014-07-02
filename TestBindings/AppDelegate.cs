@@ -26,6 +26,7 @@ namespace TestBindings
         {
             //Console.WriteLine("Version: " + Microsoft.Windows.Azure.Messaging.SBNotificationHub.Version);
             TalkingGame.TalkingDataGA.OnStart("", "");
+            StartApp.STAStartAppSDK.SharedInstance.AppID = "";
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 			

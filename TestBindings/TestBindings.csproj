@@ -108,5 +108,9 @@
       <Project>{E6FE0613-F205-432B-8D44-AF22C115441B}</Project>
       <Name>TalkingGame</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StartApp\StartApp.csproj">
+      <Project>{31FA9D08-2BF0-4CA9-A9A0-43C922CEC006}</Project>
+      <Name>StartApp</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
