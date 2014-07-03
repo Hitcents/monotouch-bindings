@@ -6,7 +6,7 @@ using MonoTouch.ObjCRuntime;
 
 namespace StartApp {
 
-	[Model, BaseType (typeof (NSObject))]
+    [Model, BaseType (typeof (NSObject)), Protocol]
 	public partial interface STADelegateProtocol {
 
 		[Export ("didLoadAd:")]
@@ -63,7 +63,7 @@ namespace StartApp {
 //		STABannerSize STA_AutoAdSize { get; }
 	}
 
-	[Model, BaseType (typeof (NSObject))]
+    [Model, BaseType (typeof (NSObject)), Protocol]
 	public partial interface STABannerDelegagteProtocol {
 
 		[Export ("didDisplayBannerAd:")]
