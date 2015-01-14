@@ -23,6 +23,7 @@
     <MtouchLink>None</MtouchLink>
     <ConsolePause>false</ConsolePause>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -98,7 +99,6 @@
   <ItemGroup>
     <InterfaceDefinition Include="TestBindingsViewController.xib" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Microsoft.Windows.Azure.Messaging\Microsoft.WindowsAzure.Messaging.csproj">
       <Project>{46A9E833-C885-4777-8BCD-B6A09369CF58}</Project>
@@ -112,5 +112,10 @@
       <Project>{31FA9D08-2BF0-4CA9-A9A0-43C922CEC006}</Project>
       <Name>StartApp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Chartboost\Chartboost.csproj">
+      <Project>{0818B6AB-78D2-471F-A08E-3501A82056F5}</Project>
+      <Name>Chartboost</Name>
+    </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>
