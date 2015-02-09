@@ -1,10 +1,10 @@
 ﻿using System;
-using MonoTouch.ObjCRuntime;
+using ObjCRuntime;
 
 namespace ChartboostSDK
 {
     [Native]
-    public enum CBFramework : uint /* nuint */ {
+    public enum CBFramework : ulong /* nuint */ {
         Unity,
         Corona,
         AIR,
@@ -14,7 +14,7 @@ namespace ChartboostSDK
     }
 
     [Native]
-    public enum CBLoadError : uint /* nuint */ {
+    public enum CBLoadError : ulong /* nuint */ {
         Internal,
         InternetUnavailable,
         TooManyConnections,
@@ -28,7 +28,7 @@ namespace ChartboostSDK
     }
 
     [Native]
-    public enum CBClickError : uint /* nuint */ {
+    public enum CBClickError : ulong /* nuint */ {
         UriInvalid,
         UriUnrecognized,
         AgeGateFailure,

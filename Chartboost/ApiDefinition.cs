@@ -1,6 +1,6 @@
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using MonoTouch.ObjCRuntime;
+using Foundation;
+using UIKit;
+using ObjCRuntime;
 
 namespace ChartboostSDK
 {
@@ -227,42 +227,34 @@ namespace ChartboostSDK
     	void DidPauseClickForConfirmation ();
 
     	// @optional -(BOOL)shouldDisplayMoreApps;
-    	[Availability (Deprecated = Platform.iOS | Platform.Mac)]
     	[Export ("shouldDisplayMoreApps")]
     	bool ShouldDisplayMoreApps ();
 
     	// @optional -(void)didDisplayMoreApps;
-    	[Availability (Deprecated = Platform.iOS | Platform.Mac)]
     	[Export ("didDisplayMoreApps")]
     	void DidDisplayMoreApps ();
 
     	// @optional -(void)didCacheMoreApps;
-    	[Availability (Deprecated = Platform.iOS | Platform.Mac)]
     	[Export ("didCacheMoreApps")]
     	void DidCacheMoreApps ();
 
     	// @optional -(void)didDismissMoreApps;
-    	[Availability (Deprecated = Platform.iOS | Platform.Mac)]
     	[Export ("didDismissMoreApps")]
     	void DidDismissMoreApps ();
 
     	// @optional -(void)didCloseMoreApps;
-    	[Availability (Deprecated = Platform.iOS | Platform.Mac)]
     	[Export ("didCloseMoreApps")]
     	void DidCloseMoreApps ();
 
     	// @optional -(void)didClickMoreApps;
-    	[Availability (Deprecated = Platform.iOS | Platform.Mac)]
     	[Export ("didClickMoreApps")]
     	void DidClickMoreApps ();
 
     	// @optional -(void)didFailToLoadMoreApps:(CBLoadError)error;
-    	[Availability (Deprecated = Platform.iOS | Platform.Mac)]
     	[Export ("didFailToLoadMoreApps:")]
     	void DidFailToLoadMoreApps (CBLoadError error);
 
     	// @optional -(void)didLoadInPlay;
-    	[Availability (Deprecated = Platform.iOS | Platform.Mac)]
     	[Export ("didLoadInPlay")]
     	void DidLoadInPlay ();
     }
