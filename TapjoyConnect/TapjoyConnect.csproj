@@ -55,4 +55,37 @@
   <ItemGroup>
     <ObjcBindingNativeLibrary Include="Tapjoy.a" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="TapjoyResources.bundle\1.sql" />
+    <BundleResource Include="TapjoyResources.bundle\2.sql" />
+    <BundleResource Include="TapjoyResources.bundle\3.sql" />
+    <BundleResource Include="TapjoyResources.bundle\addressbar-background.png" />
+    <BundleResource Include="TapjoyResources.bundle\addressbar-background%402x.png" />
+    <BundleResource Include="TapjoyResources.bundle\back.png" />
+    <BundleResource Include="TapjoyResources.bundle\back%402x.png" />
+    <BundleResource Include="TapjoyResources.bundle\back-disabled.png" />
+    <BundleResource Include="TapjoyResources.bundle\back-disabled%402x.png" />
+    <BundleResource Include="TapjoyResources.bundle\close.png" />
+    <BundleResource Include="TapjoyResources.bundle\close%402x.png" />
+    <BundleResource Include="TapjoyResources.bundle\forward.png" />
+    <BundleResource Include="TapjoyResources.bundle\forward%402x.png" />
+    <BundleResource Include="TapjoyResources.bundle\forward-disabled.png" />
+    <BundleResource Include="TapjoyResources.bundle\forward-disabled%402x.png" />
+    <BundleResource Include="TapjoyResources.bundle\Info.plist" />
+    <BundleResource Include="TapjoyResources.bundle\mraid.js.txt" />
+    <BundleResource Include="TapjoyResources.bundle\MRAID_Standard_HTML_Stub.html" />
+    <BundleResource Include="TapjoyResources.bundle\MRAID_Standard_JS_Stub.html" />
+    <BundleResource Include="TapjoyResources.bundle\MRAIDWebBrowserViewController.nib" />
+    <BundleResource Include="TapjoyResources.bundle\openbrowser.png" />
+    <BundleResource Include="TapjoyResources.bundle\openbrowser%402x.png" />
+    <BundleResource Include="TapjoyResources.bundle\refresh.png" />
+    <BundleResource Include="TapjoyResources.bundle\refresh%402x.png" />
+    <BundleResource Include="TapjoyResources.bundle\revision.txt" />
+    <BundleResource Include="TapjoyResources.bundle\TJCclose_button.png" />
+    <BundleResource Include="TapjoyResources.bundle\TJCclose_button%402x.png" />
+    <BundleResource Include="TapjoyResources.bundle\TJCLoadingView.nib" />
+    <BundleResource Include="TapjoyResources.bundle\TJCVideoView.nib" />
+    <BundleResource Include="TapjoyResources.bundle\WebViewJavascriptBridge.js.txt" />
+    <BundleResource Include="en.lproj\InfoPlist.strings" />
+  </ItemGroup>
 </Project>
