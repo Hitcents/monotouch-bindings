@@ -4,86 +4,126 @@ using UIKit;
 
 namespace TalkingGame {
 
-	[BaseType (typeof (NSObject))]
-	public partial interface TalkingDataGA {
+    // @interface TalkingDataGA : NSObject
+    [Protocol]
+    [BaseType (typeof (NSObject))]
+    interface TalkingDataGA {
 
-		[Static, Export ("onStart:withChannelId:")]
-		void OnStart (string appId, string channelId);
+        // +(void)onStart:(NSString *)appId withChannelId:(NSString *)channelId;
+        [Static, Export ("onStart:withChannelId:")]
+        void OnStart (string appId, string channelId);
 
-		[Static, Export ("onEvent:eventData:")]
-		void OnEvent (string eventId, NSDictionary eventData);
+        // +(void)onEvent:(NSString *)eventId eventData:(NSDictionary *)eventData;
+        [Static, Export ("onEvent:eventData:")]
+        void OnEvent (string eventId, NSDictionary eventData);
 
-		[Static, Export ("setLatitude:longitude:")]
-		void SetLatitude (double latitude, double longitude);
+        // +(void)setLatitude:(double)latitude longitude:(double)longitude;
+        [Static, Export ("setLatitude:longitude:")]
+        void SetLatitude (double latitude, double longitude);
 
-		[Static, Export ("getDeviceId")]
-		string GetDeviceId { get; }
+        // +(NSString *)getDeviceId;
+        [Static, Export ("getDeviceId")]
+        string GetDeviceId ();
 
-		[Static, Export ("setVerboseLogDisabled")]
-		void SetVerboseLogDisabled ();
+        // +(void)setDeviceToken:(NSData *)deviceToken;
+        [Static, Export ("setDeviceToken:")]
+        void SetDeviceToken (NSData deviceToken);
 
-		[Static, Export ("sdkType")]
-		int SdkType { set; }
-	}
+        // +(BOOL)handleTDGAPushMessage:(NSDictionary *)message;
+        [Static, Export ("handleTDGAPushMessage:")]
+        bool HandleTDGAPushMessage (NSDictionary message);
 
-	[BaseType (typeof (NSObject))]
-	public partial interface TDGAAccount {
+        // +(void)setVerboseLogDisabled;
+        [Static, Export ("setVerboseLogDisabled")]
+        void SetVerboseLogDisabled ();
 
-		[Static, Export ("setAccount:")]
-		TDGAAccount SetAccount (string accountId);
+        // +(void)setSdkType:(int)type;
+        [Static, Export ("setSdkType:")]
+        void SetSdkType (int type);
+    }
 
-		[Export ("accountName")]
-		string AccountName { set; }
+    // @interface TDGAAccount : NSObject
+    [Protocol]
+    [BaseType (typeof (NSObject))]
+    interface TDGAAccount {
 
-		[Export ("accountType")]
-		TDGAAccountType AccountType { set; }
+        // +(TDGAAccount *)setAccount:(NSString *)accountId;
+        [Static, Export ("setAccount:")]
+        TDGAAccount SetAccount (string accountId);
 
-		[Export ("level")]
-		int Level { set; }
+        // -(void)setAccountName:(NSString *)accountName;
+        [Export ("setAccountName:")]
+        void SetAccountName (string accountName);
 
-		[Export ("gender")]
-		TDGAGender Gender { set; }
+        // -(void)setAccountType:(TDGAAccountType)accountType;
+        [Export ("setAccountType:")]
+        void SetAccountType (TDGAAccountType accountType);
 
-		[Export ("age")]
-		int Age { set; }
+        // -(void)setLevel:(int)level;
+        [Export ("setLevel:")]
+        void SetLevel (int level);
 
-		[Export ("gameServer")]
-		string GameServer { set; }
-	}
+        // -(void)setGender:(TDGAGender)gender;
+        [Export ("setGender:")]
+        void SetGender (TDGAGender gender);
 
-	[BaseType (typeof (NSObject))]
-	public partial interface TDGAMission {
+        // -(void)setAge:(int)age;
+        [Export ("setAge:")]
+        void SetAge (int age);
 
-		[Static, Export ("onBegin:")]
-		void OnBegin (string missionId);
+        // -(void)setGameServer:(NSString *)gameServer;
+        [Export ("setGameServer:")]
+        void SetGameServer (string gameServer);
+    }
 
-		[Static, Export ("onCompleted:")]
-		void OnCompleted (string missionId);
+    // @interface TDGAMission : NSObject
+    [Protocol]
+    [BaseType (typeof (NSObject))]
+    interface TDGAMission {
 
-		[Static, Export ("onFailed:failedCause:")]
-		void OnFailed (string missionId, string cause);
-	}
+        // +(void)onBegin:(NSString *)missionId;
+        [Static, Export ("onBegin:")]
+        void OnBegin (string missionId);
 
-	[BaseType (typeof (NSObject))]
-	public partial interface TDGAVirtualCurrency {
+        // +(void)onCompleted:(NSString *)missionId;
+        [Static, Export ("onCompleted:")]
+        void OnCompleted (string missionId);
 
-		[Static, Export ("onChargeRequst:iapId:currencyAmount:currencyType:virtualCurrencyAmount:paymentType:")]
-		void OnChargeRequst (string orderId, string iapId, double currencyAmount, string currencyType, double virtualCurrencyAmount, string paymentType);
+        // +(void)onFailed:(NSString *)missionId failedCause:(NSString *)cause;
+        [Static, Export ("onFailed:failedCause:")]
+        void OnFailed (string missionId, string cause);
+    }
 
-		[Static, Export ("onChargeSuccess:")]
-		void OnChargeSuccess (string orderId);
+    // @interface TDGAVirtualCurrency : NSObject
+    [Protocol]
+    [BaseType (typeof (NSObject))]
+    interface TDGAVirtualCurrency {
 
-		[Static, Export ("onReward:reason:")]
-		void OnReward (double virtualCurrencyAmount, string reason);
-	}
+        // +(void)onChargeRequst:(NSString *)orderId iapId:(NSString *)iapId currencyAmount:(double)currencyAmount currencyType:(NSString *)currencyType virtualCurrencyAmount:(double)virtualCurrencyAmount paymentType:(NSString *)paymentType;
+        [Static, Export ("onChargeRequst:iapId:currencyAmount:currencyType:virtualCurrencyAmount:paymentType:")]
+        void OnChargeRequst (string orderId, string iapId, double currencyAmount, string currencyType, double virtualCurrencyAmount, string paymentType);
 
-	[BaseType (typeof (NSObject))]
-	public partial interface TDGAItem {
+        // +(void)onChargeSuccess:(NSString *)orderId;
+        [Static, Export ("onChargeSuccess:")]
+        void OnChargeSuccess (string orderId);
 
-		[Static, Export ("onPurchase:itemNumber:priceInVirtualCurrency:")]
-		void OnPurchase (string item, int number, double price);
+        // +(void)onReward:(double)virtualCurrencyAmount reason:(NSString *)reason;
+        [Static, Export ("onReward:reason:")]
+        void OnReward (double virtualCurrencyAmount, string reason);
+    }
 
-		[Static, Export ("onUse:itemNumber:")]
-		void OnUse (string item, int number);
-	}
+    // @interface TDGAItem : NSObject
+    [Protocol]
+    [BaseType (typeof (NSObject))]
+    interface TDGAItem {
+
+        // +(void)onPurchase:(NSString *)item itemNumber:(int)number priceInVirtualCurrency:(double)price;
+        [Static, Export ("onPurchase:itemNumber:priceInVirtualCurrency:")]
+        void OnPurchase (string item, int number, double price);
+
+        // +(void)onUse:(NSString *)item itemNumber:(int)number;
+        [Static, Export ("onUse:itemNumber:")]
+        void OnUse (string item, int number);
+    }
+
 }

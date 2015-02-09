@@ -2,7 +2,7 @@
 
 namespace TalkingGame
 {
-    public enum TDGAAccountType {
+    public enum TDGAAccountType : uint {
         AccountAnonymous = 0,
         AccountRegistered = 1,
         AccountSinaWeibo = 2,
@@ -21,7 +21,7 @@ namespace TalkingGame
         AccountType10 = 20
     }
 
-    public enum TDGAGender {
+    public enum TDGAGender : uint {
         GenderUnknown = 0,
         GenderMale = 1,
         GenderFemale = 2

@@ -6,11 +6,13 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7933CD04-0D8E-40A2-B412-52955A7441D3}</ProjectGuid>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>TestBindings</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>TestBindings</AssemblyName>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,6 +47,7 @@
     <MtouchDebug>true</MtouchDebug>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchArch>ARMv7</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -54,6 +57,7 @@
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
     <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>full</DebugType>
@@ -65,6 +69,7 @@
     <BuildIpa>true</BuildIpa>
     <ConsolePause>false</ConsolePause>
     <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>full</DebugType>
@@ -75,12 +80,13 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <ConsolePause>false</ConsolePause>
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
+    <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -100,22 +106,18 @@
     <InterfaceDefinition Include="TestBindingsViewController.xib" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.Windows.Azure.Messaging\Microsoft.WindowsAzure.Messaging.csproj">
-      <Project>{46A9E833-C885-4777-8BCD-B6A09369CF58}</Project>
-      <Name>Microsoft.WindowsAzure.Messaging</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TalkingGame\TalkingGame.csproj">
       <Project>{E6FE0613-F205-432B-8D44-AF22C115441B}</Project>
       <Name>TalkingGame</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StartApp\StartApp.csproj">
-      <Project>{31FA9D08-2BF0-4CA9-A9A0-43C922CEC006}</Project>
-      <Name>StartApp</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chartboost\Chartboost.csproj">
       <Project>{0818B6AB-78D2-471F-A08E-3501A82056F5}</Project>
       <Name>Chartboost</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TapjoyConnect\TapjoyConnect.csproj">
+      <Project>{39AC71BD-E589-4F64-B294-0B390C2DE106}</Project>
+      <Name>TapjoyConnect</Name>
+    </ProjectReference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

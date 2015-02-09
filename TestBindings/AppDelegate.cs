@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 
 namespace TestBindings
 {
@@ -26,8 +26,8 @@ namespace TestBindings
         {
             //Console.WriteLine("Version: " + Microsoft.Windows.Azure.Messaging.SBNotificationHub.Version);
             TalkingGame.TalkingDataGA.OnStart("", "");
-            StartApp.STAStartAppSDK.SharedInstance.AppID = "";
-            ChartboostSDK.Chartboost.StartWithAppId("", "", null);
+            TapjoySDK.Tapjoy.SharedTapjoyConnect();
+            ChartboostSDK.Chartboost.CacheInterstitial("");
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 			
