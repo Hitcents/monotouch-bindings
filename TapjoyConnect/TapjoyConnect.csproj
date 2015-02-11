@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{39AC71BD-E589-4F64-B294-0B390C2DE106}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>TapjoyConnect</RootNamespace>
+    <RootNamespace>TapjoySDK</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>TapjoyConnect</AssemblyName>
   </PropertyGroup>
@@ -44,6 +44,7 @@
     <Compile Include="Tapjoy.linkwith.cs">
       <DependentUpon>Tapjoy.a</DependentUpon>
     </Compile>
+    <Compile Include="TapjoyConnect.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
